@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Etiquetas HTML</title>
+        <meta charset="utf-8"/>
+        <meta name="author" content="Uriel Montejano Briano"/>
+        <meta name="description" content="JavaScript-Document Object Model"/>
+        <meta name="keywords" content="hmtl,tags,script"/>
+        <meta name="revised" content="Miercoles, 18 mayo 2022"/>
+    </head>
+    
+    <body>
+        <main>
+            <h1>Javascript</h1>
+            
+            <hgroup>
+                <h3>Ejemplo No.1</h3>
+                <p id="ejemplo_1"></p>
+            </hgroup>
+            <hgroup>
+                <h3>Ejemplo No.2</h3>
+                <form id="myform2">
+                    Nombre: <input type="text" name="firstName" value="Universidad Politecnica">
+                    <br>
+                    Apellido: <input type="text" name="lastName" value="de San Luis Potosi">
+                    <br>
+                    <input type="submit">
+                    <input type="reset">
+                </form>
+                <br>
+                <button onclick="myFuncion()">Acci&oacute;n</button>
+                <p id="ejemplo_2"></p>
+            </hgroup>
+            <hgroup>
+                <h3>Ejemplo No.3</h3>
+                <form id="myform3">
+                    Cadena muestra: <input type="text" name="txtCadena">
+                    <input type="button" value="Read" onclick="readText()">
+                    <input type="button" value="Write" onclick="writeText()">
+                </form>
+                <br>
+                <form id="myform3_1">
+                    Comentarios:<br>
+                    <textarea name="myArea" cols="40" rows="5">Hola a todos....</textarea><br>
+                    <input type="button" value="Test" onclick="testArea()">
+                </form>            
+            </hgroup>
+            <hgroup>
+                <h3>Ejemplo No.4</h3>
+                <form id="myform4">
+                    <input type="radio" name="opcionRadio">Opci&oacute;n No.1<br>
+                    <input type="radio" name="opcionRadio">Opci&oacute;n No.2<br>
+                    <input type="radio" name="opcionRadio">Opci&oacute;n No.3<br>
+                    <input type="radio" name="opcionRadio">Opci&oacute;n No.4<br>
+                    <input type="radio" name="opcionRadio">Opci&oacute;n No.5<br>
+                    <input type="button" value="Prueba" onclick="testRadio()"><br>
+                </form>
+                <br>
+                <form id="myform4_1">
+                    <input type="checkbox" name="CheckBox1" value="CheckBox 1">Opci&oacute;n No.1<br>
+                    <input type="checkbox" name="CheckBox2" value="CheckBox 2">Opci&oacute;n No.2<br>
+                    <input type="checkbox" name="CheckBox3" value="CheckBox 3">Opci&oacute;n No.3<br>
+                    <input type="checkbox" name="CheckBox4" value="CheckBox 4"value="CheckBox 1">Opci&oacute;n No.4<br>
+                    <input type="checkbox" name="CheckBox5" value="CheckBox 5">Opci&oacute;n No.5<br>
+                    <input type="button" value="Prueba" onclick="testCheck()"><br>
+                </form>
+                <br>
+                <form id="myform4_2">
+                    <select id="lstOpciones">
+                        <option>--- Selecciona ---</option>
+                        <option>Alternativa No.1</option>
+                        <option>Alternativa No.2</option>
+                        <option>Alternativa No.3</option>
+                        <option>Alternativa No.4</option>
+                        <option>Alternativa No.5</option>
+                    </select>
+                    <br>
+                    <input type="button" value="Prueba" onclick="testSlect()">
+                </form>
+            </hgroup>
+        </main>
+        <script>
+            //var x, y, z;  /*Tipo de declaración global*/
+            let x,y,z;
+            x = 5;
+            y = 6;
+            z = x + y;
+            document.getElementById('ejemplo_1').innerHTML = "El valor de la variable z es: " +z;
+            
+            function myFuncion(){
+                let x = document.getElementById('myForm');
+                let text ="";
+                let i;
+                
+                for(i=0; i< x.length; i++) {
+                    text += x.elements[i.value + "<br>"]
+                }
+                
+                document.getElementById('ejemplo_2').innerHTML = x;
+            }
+            
+            function readText() {
+                var frm = document.getElementById('myform3');
+                var test = frm.txtCadena.value;
+                alert('Escribiste: ' + test);
+            }
+            
+            function writeText() {
+                var frm = document.getElementById('myform3');
+                frm.txtCadena.value = 'Hola Mundo!!!';
+            }
+            
+            function testArea() {
+                var frm = document.getElementById('myform3_1');
+                alert('Comentarios: \n' + frm.myArea.value);
+            }
+            
+            function testRadio() {
+                var frm = document.getElementById('myform4');
+                for (i=0; i < 5; i++) {
+                    if(frm.opcionRadio[i].checked)
+                        break;
+                }
+                alert('La alternativa: ' + (i + 1) + ' esta seleccionada...');
+            }
+            
+            function testCheck() {
+                var frm = document.getElementById('myform4_1');
+                var txtResult = 'Lista de opciones: \n';
+                if(frm.CheckBox1.checked)
+                    txtResult += '>' + frm.CheckBox1.value + '\n';
+                if(frm.CheckBox2.checked)
+                    txtResult += '>' + frm.CheckBox2.value + '\n';
+                if(frm.CheckBox3.checked)
+                    txtResult += '>' + frm.CheckBox3.value + '\n';
+                if(frm.CheckBox4.checked)
+                    txtResult += '>' + frm.CheckBox4.value + '\n';
+                if(frm.CheckBox5.checked)
+                    txtResult += '>' + frm.CheckBox5.value + '\n';
+                   
+                alert(txtResult);
+            }
+            
+            function testSlect() {
+                var frm = document.getElementById('myform4_2');
+                var index = frm.lstOpciones.selectedIndex;
+                if(index == 0)
+                    cadena = 'No seleccionaste una alternativa';
+                else
+                    cadena = 'Seleccionaste la alternativa No. ' + index;
+                
+                alert(cadena);
+            }
+            
+            
+        </script>
+    </body>
+
+</html>

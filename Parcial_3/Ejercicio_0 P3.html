@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ETIQUETAS HTML</title>
+        <meta charset="utf-8"/>
+        <meta name="author" content="Uriel Montejano Briano"/>
+        <meta name="description" content="Hojas de estilo en cascada"/>
+        <meta name="keywords" content="hmtl,tags,style"/>
+        <meta name="revised" content="Lunes, 02 Mayo 2022"/>
+        
+        <link href="estilos.css" rel="stylesheet" type="text/css">
+        <style type="text/css">
+            body{
+                background-color: gray;
+                color: white;
+                padding-top: 25px;
+                padding-left: 25px;
+                padding-right: 0px;
+            }
+            
+            h1{
+                color: yellow;
+            }
+            
+            h3{
+                color: orange;
+                text-shadow: 3px 3px #000;
+            }
+            
+            ul{
+                width: 150px;
+                background-color: bisque;
+                text-align: center;
+            }
+            p{
+                text-transform: capitalize;
+            }
+        
+        </style>
+    </head>
+    
+    <body>
+        <main>
+            <h1>Main</h1>
+            <h2>CSS</h2>
+            <section>
+                <hgroup>
+                    <h3>Estilo en linea 1.0</h3>
+                    <ul style="color: green; width: 200px;">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="libros.html">Libros de programación</a></li>
+                        <li><a href="cursos.html">Cursos de programación</a></li>
+                        <li><a href="humor.html">Humor informático</a></li>
+                    </ul>
+                </hgroup>
+                
+                <hgroup>
+                    <h3>Estilo en linea 2.0</h3>
+                    <ul style="color: orange;">
+                        <li>Elemento No.1<a href="#" style="color: green;">Inicio</a></li>
+                        <li>Elemento No.2<a href="libros.html" style="color: green;">Libros de programación</a></li>
+                        <li>Elemento No.3<a href="cursos.html" style="color: green;">Cursos de programacion</a></li>
+                        <li>Elemento No.4<a href="humor.html" style="color: green;">Humor informático</a></li>
+                    </ul>
+                </hgroup>
+                
+                <hgroup>
+                    <h3>Estilo en linea 3.0</h3>
+                    <ul style="color: red;">
+                        <li><a href="#" style="color: green;" text-decoration: none;>Inicio</a></li>
+                        <li><a href="libros.html" style="color: green;" text-decoration: none;>Libros de programación</a></li>
+                        <li><a href="cursos.html" style="color: green;" text-decoration: none;>Cursos de programación</a></li>
+                        <li><a href="humor.html" style="color: green;" text-decoration: none;>Humor informático</a></li>
+                    </ul>
+                </hgroup>
+                
+                <hgroup>
+                    <h3>Estilo en linea 4.0</h3>
+                    <ul styke="color:green; width:200px; text-align: right;">
+                        <li><a href="#" style="text-decoration: line-through;">Inicio</a></li>
+                        <li><a href="libros.html" style="text-decoration: line-through;">Libros de programación</a></li>
+                        <li><a href="cursos.html" style="text-decoration: line-through;">Cursos de programación</a></li>
+                        <li><a href="humor.html" style="text-decoration: line-through;">Humor informático</a></li>
+                    </ul>
+                </hgroup>
+                
+                <hgroup>
+                    <h3>Estilo en linea 5.0</h3>
+                    <ul style="color: green; width: 200px; text-align: left; text-transform: uppercase;">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="libros.html">Libros de programación</a></li>
+                        <li><a href="cursos.html">Cursos de programacion</a></li>
+                        <li><a href="humor.html">Humor informático</a></li> 
+                    </ul>
+                </hgroup>
+                
+                <hgroup>
+                    <h3>Estilo en linea 6.0</h3>
+                    <p style="text-indent: 10%; line-height: 150%;">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum volutpat laoreet orci vitae consequat. Maecenas vel ex vel nisi egestas ultrices. Suspendisse dignissim vehicula erat a egestas. Praesent a lacus blandit, molestie diam maximus, luctus felis. Donec id quam eros. Sed vestibulum velit a magna commodo, at finibus justo ultrices. Nam ornare orci dui, ac dignissim ante posuere vitae. Curabitur id turpis vel purus consectetur vestibulum. Sed velit enim, eleifend et lectus a, imperdiet dictum nulla. Fusce dolor risus, tempus vitae varius eget, mollis quis sem. Nulla suscipit, orci nec hendrerit accumsan, sapien dolor lacinia tortor, non egestas leo metus at lectus.</p>
+                    <p style="padding-left: 25px; text-indent: -25px; text-shadow: 3px 3px blue;">
+                        In hac habitasse platea dictumst. Aliquam sed erat vitae orci lobortis vulputate. Proin aliquam scelerisque urna sit amet molestie. Donec metus nisl, bibendum nec porttitor eget, viverra et risus. Integer commodo imperdiet felis, vitae ultrices enim tempor eget. Nunc tempus vehicula odio sed rutrum. Vestibulum scelerisque lobortis sapien a euismod. Sed egestas tempor tristique. Donec malesuada nibh sed aliquet aliquet. Donec volutpat quis turpis nec iaculis. Morbi posuere risus nisi, sit amet lobortis augue volutpat luctus. Aenean at risus purus. Praesent ullamcorper finibus orci, sit amet sodales nisl sodales vulputate. Nullam ac ultrices est. </p>
+                    <p style="text-indent: 5en; line-height: 2.5;">
+                        Mauris felis elit, efficitur non nisl vel, finibus fermentum nisi. Nullam a enim pulvinar, imperdiet ex a, tempus libero. Fusce est urna, tincidunt vel suscipit et, auctor blandit tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec placerat tincidunt arcu sit amet rhoncus. Aliquam a egestas elit. Quisque commodo libero id varius posuere. Pellentesque eget tincidunt sem. Suspendisse nec facilisis libero. Nunc et interdum risus. Integer scelerisque felis a risus tempor, ac ornare lorem vehicula. Aliquam erat volutpat. Interdum et malesuada fames ac ante ipsum primis in faucibus. In id eros orci. Nunc suscipit porta consequat.
+
+                        Suspendisse in pharetra justo. Praesent eu commodo elit. Donec sollicitudin sapien vitae urna fermentum, eget mollis justo gravida. Donec arcu eros, ultricies at est tincidunt, pulvinar mattis mauris. Curabitur cursus pretium urna nec hendrerit. Praesent bibendum turpis at malesuada consectetur. Sed tempus molestie diam eget rhoncus. Nulla quam lectus, mollis sed finibus vel, dictum a ante.
+                    </p>
+                </hgroup>
+            </section>
+        </main>
+    </body>
+</html>

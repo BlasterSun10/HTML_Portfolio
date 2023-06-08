@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ETIQUETAS HTML</title>
+        <meta charset="utf-8"/>
+        <meta name="author" content="Uriel Montejano Briano"/>
+        <meta name="description" content="Estilos script"/>
+        <meta name="keywords" content="hmtl,tags,style, script, etiqueta, externo"/>
+        <meta name="revised" content="Sábado, 14 Mayo 2022"/>
+    </head>
+    
+    <body>
+        <hgroup>
+            <table border="5">
+                <tr>
+                    <td></td>
+                    <td align="center">I</td>
+                    <td align="center">II</td>
+                    <td align="center">III</td>
+                    <td align="center">IV</td>
+                    <td align="center">V</td>
+                </tr>
+                <tr>
+                    <td align="center">Etiqueta</td>
+                    <td align="center"><button onclick="document.body.style.backgroundColor='#17FF00';">Color Verde Limón</button></td>
+                    <td align="center"><button onclick="document.body.style.backgroundColor='#0036FF';">Color Azul Rey</button></td>
+                    <td align="center"><button onclick="document.body.style.backgroundColor='#FF0000';">Color Rojo</button></td>
+                    <td align="center"><button onclick="document.body.style.backgroundColor='#FF00FF';">Color Rosa mexicano</button></td>
+                    <td align="center"><button onclick="document.body.style.backgroundColor='#FF9E00';">Color Naranja</button></td>
+                </tr>
+                
+                <tr>
+                    <td>Script</td>
+                    <td align="center"><button id="col_1">Color Bisque</button></td>
+                    <td align="center"><button id="col_2">Color Café</button></td>
+                    <td align="center"><button id="col_3">Color Azul oscuro</button></td>
+                    <td align="center"><button id="col_4">Color Oro</button></td>
+                    <td align="center"><button id="col_5">Color Rosa</button></td>
+                    
+                    <script>
+                        document.getElementById('col_1').addEventListener('click', () =>{document.body.style.backgroundColor='#ffe4c4';})
+                    </script>
+                    <script>
+                        document.getElementById('col_2').addEventListener('click', () =>{document.body.style.backgroundColor='#a52a2a';})
+                    </script>
+                    <script>
+                        document.getElementById('col_3').addEventListener('click', () =>{document.body.style.backgroundColor='#00008b';})
+                    </script>
+                    <script>
+                        document.getElementById('col_4').addEventListener('click', () =>{document.body.style.backgroundColor='#ffd700';})
+                    </script>
+                    <script>
+                        document.getElementById('col_5').addEventListener('click', () =>{document.body.style.backgroundColor='#ffc0cb';})
+                    </script>
+                    
+                </tr>
+                
+                <tr>
+                    <td align="center">Externo</td>
+                    <td align="center"><button id="coljs_1">Color Gris</button></td>
+                    <td align="center"><button id="coljs_2">Color Verde/Amarillo</button></td>
+                    <td align="center"><button id="coljs_3">Color violeta</button></td>
+                    <td align="center"><button id="coljs_4">Color Salmon</button></td>
+                    <td align="center"><button id="coljs_5">Color Rojo oscuro</button></td>
+                    
+                    <script src="estscript.js"></script>
+
+                </tr>
+            </table>
+        </hgroup>
+        <td><button onclick="document.body.style.backgroundColor='#FFFFFF';">Restaurar color</button></td>
+    </body>
+    
+</html>

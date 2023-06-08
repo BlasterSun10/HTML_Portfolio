@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FORMULARIO FÍSICA Y MATEMÁTICAS</title>
+        <meta charset="utf-8"/>
+        <meta name="author" content="Uriel Montejano Briano"/>
+        <meta name="description" content="Formulario fisica y mate JavaScript"/>
+        <meta name="keywords" content="hmtl,tags,javascript, formulario, matematicas, fisica"/>
+        <meta name="revised" content="Sábado, 21 Mayo 2022"/>
+    </head>
+    <body>
+        
+        <table border="3px">
+            <tr>
+                <th colspan="3"><p align="center">Física</p></th>
+            </tr>
+            
+            <tr>
+                <td>Fórmula</td>
+                <td>Variables</td>
+                <td>Resultado</td>
+            </tr>
+            
+            <tr>
+                <td>V=d/t (Velocidad)</td>
+                <td>
+                    Distancia<input type="number" id="distancia">
+                    <br>
+                    Tiempo<input type="number" id="tiempo">
+                </td>
+                <td>
+                    <input type="button" value="Calcular" onclick="vel();">
+                    <input type="number" id="resul">
+                </td>
+            </tr>
+            
+            <tr>
+                <td>a=v/t (Aceleración)</td>
+                <td>
+                    Velocidad<input type="number" id="velo">
+                    <br>
+                    Tiempo<input type="number" id="tiemp">
+                </td>
+                <td>
+                    <input type="button" value="Calcular" onclick="acel();">
+                    <input type="number" id="result">
+                </td>
+            </tr>
+            
+            <tr>
+                <td>P=mg (Peso)</td>
+                <td>
+                    Masa<input type="number" id="masa">
+                </td>
+                <td>
+                    <input type="button" value="Calcular" onclick="peso();">
+                    <input type="number" id="resulP">
+                </td>
+            </tr>
+            
+            <tr>
+                <td>E=mc<sup>2</sup> (Relatividad especial)</td>
+                <td>
+                    Masa<input type="number" id="masaE">
+                </td>
+                <td>
+                    <input type="button" value="Calcular" onclick="rela();">
+                    <input type="number" id="resulR">
+                </td>
+            </tr>
+            
+            <tr>
+                <td>F=G(m<sub>1</sub>m<sub>2</sub>)/r<sup>2</sup> (Gravitación unversal)</td>
+                <td>
+                    Masa 1<input type="number" id="masa1F"><br>
+                    Masa 2<input type="number" id="masa2F"><br>
+                    Distancia<input type="number" id="disF">
+                </td>
+                <td>
+                    <input type="button" value="Calcular" onclick="grav();">
+                    <input type="number" id="resulF">
+                </td>
+            </tr>
+            
+            <tr>
+                <td>a<sup>2</sup>+b<sup>2</sup>=c<sup>2</sup> (Teoréma de pitágoras)</td>
+                <td>
+                    Lado a<input type="number" id="lada"><br>
+                    Lado b<input type="number" id="ladb">
+                </td>
+                <td>
+                    <input type="button" value="Calcular" onclick="pit();">
+                    <input type="number" id="resulpit">
+                </td>
+            </tr>
+            
+            <tr>
+                <th colspan="3"><p align="center">Matemáticas</p></th>
+            </tr>
+            
+            <tr>
+                <td>Figura</td>
+                <td>Variables</td>
+                <td>Resultado</td>
+            </tr>
+            
+            <tr>
+                <td><img src="https://www.smartick.es/blog/wp-content/uploads/cuadrado.png" wdth="100px" height="100px"><br>Cuadrado</td>
+                <td>
+                    Lado<input type="number" id="ladoc">
+                </td>
+                <td>
+                    <input type="button" value="Calcular" onclick="cuadrado();">
+                    <input type="number" id="resulcuad">
+                </td>
+            </tr>
+            
+            <tr>
+                <td><img src="https://m.media-amazon.com/images/I/31TixOzQuoL._AC_.jpg" wdth="100px" height="100px"><br>Rectangulo</td>
+                <td>
+                    Alto<input type="number" id="altor"><br>
+                    Ancho<input type="number" id="anchor">
+                </td>
+                <td>
+                    <input type="button" value="Calcular" onclick="rectangulo();">
+                    <input type="number" id="resulrec">
+                </td>
+            </tr>
+            
+            <tr>
+                <td><img src="https://www.masscience.com/wp-content/uploads/2019/10/trrrrr-1.jpg" wdth="100px" height="100px"><br>Triangulo</td>
+                <td>
+                    Base<input type="number" id="base"><br>
+                    Altura<input type="number" id="altot"><br>
+                </td>
+                <td>
+                    <input type="button" value="Calcular" onclick="triangulo();">
+                    <input type="number" id="resultri">
+                </td>
+            </tr>
+            
+            <tr>
+                <td><img src="https://matematicasparaticharito.files.wordpress.com/2015/02/cc3adrculo.png" wdth="100px" height="100px"><br>Círculo</td>
+                <td>
+                    Radio<input type="number" id="radio"><br>
+                </td>
+                <td>
+                    <input type="button" value="Calcular" onclick="circ();">
+                    <input type="number" id="resulcirc">
+                </td>
+            </tr>
+            
+            <tr>
+                <td><img src="https://img3.colorearjunior.com/colecci%C3%B3n-de-pol%C3%ADgonos-re_575599f96fe95-p.gif" wdth="150px" height="100px"><br>Polígonos</td>
+                <td>
+                    No. Lados<input type="number" id="ladop"><br>
+                    Apotema<input type="number" id="apot"><br>
+                </td>
+                <td>
+                    <input type="button" value="Calcular" onclick="poli();">
+                    <input type="number" id="resulpol">
+                </td>
+            </tr>
+            
+            
+        </table>
+        
+        
+        
+        
+        <script>
+            function vel(){
+                var dist= document.getElementById('distancia').value;
+                var tiem= document.getElementById('tiempo').value;
+                var resul;
+                resul=dist/tiem;
+                document.getElementById('resul').value=resul;
+            }
+            
+            function acel(){
+                var velo= document.getElementById('velo').value;
+                var tiemp= document.getElementById('tiemp').value;
+                var result;
+                result=velo/tiemp;
+                document.getElementById('result').value=result;
+            }
+            
+            function peso(){
+                var masa= document.getElementById('masa').value;
+                var resulP;
+                resulP=masa*9.81;
+                document.getElementById('resulP').value=resulP;
+            }
+            
+            function rela(){
+                var masaE= document.getElementById('masaE').value;
+                var resulR;
+                var vluz;
+                vluz=Math.pow(300000000,2)
+                resulR=masaE*vluz;
+                document.getElementById('resulR').value=resulR;
+            }
+            
+            function grav(){
+                var masa1F= document.getElementById('masa1F').value;
+                var masa2F= document.getElementById('masa2F').value;
+                var disF= document.getElementById('disF').value;
+                var resulF;
+                var disc;
+                disc=Math.pow(disF,2);
+                resulF=9.81*((masa1F*masa2F)/disc);
+                document.getElementById('resulF').value=resulF;
+            }
+            
+            function pit(){
+                var lada= document.getElementById('lada').value;
+                var ladb= document.getElementById('ladb').value;
+                var resulpit;
+                var cuada;
+                var cuadb;
+                var suma;
+                cuada=Math.pow(lada,2);
+                cuadb=Math.pow(ladb,2);
+                suma=cuada+cuadb;
+                resulpit=Math.sqrt(suma);
+                document.getElementById('resulpit').value=resulpit;
+            }
+            
+            function cuadrado(){
+                var ladoc= document.getElementById('ladoc').value;
+                var resulcuad;
+                resulcuad=Math.pow(ladoc,2);
+                document.getElementById('resulcuad').value=resulcuad;
+            }
+            
+            function rectangulo(){
+                var altor= document.getElementById('altor').value;
+                var anchor= document.getElementById('anchor').value;
+                var resulrec;
+                resulrec=altor*anchor;
+                document.getElementById('resulrec').value=resulrec;
+            }
+            
+            function triangulo(){
+                var altot= document.getElementById('altot').value;
+                var base= document.getElementById('base').value;
+                var resultri;
+                resultri=(altot*base)/2;
+                document.getElementById('resultri').value=resultri;
+            }
+            
+            function circ(){
+                var radio= document.getElementById('radio').value;
+                var resulcirc;
+                var radcuad;
+                radcuad=Math.pow(radio,2);
+                resulcirc=3.1416*radcuad;
+                document.getElementById('resulcirc').value=resulcirc;
+            }
+            
+            function poli(){
+                var ladop= document.getElementById('ladop').value;
+                var apot= document.getElementById('apot').value;
+                var resulpol;
+                resulpol=(ladop*apot)/2;
+                document.getElementById('resulpol').value=resulpol;
+            }
+             
+            
+            
+            
+            
+            
+        </script>
+        
+    </body>
+</html>

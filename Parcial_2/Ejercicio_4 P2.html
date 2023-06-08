@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TABLASL</title>
+        <meta charset="utf-8"/>
+        <meta name="author" content="Uriel Montejano Briano"/>
+        <meta name="description" content="Tablas"/>
+        <meta name="keywords" content="hmtl,tags, sup, sub, code, var, kbd, samp, pre, details, summary, audio"/>
+        <meta name="generator" content="Brackets"/>
+        <meta name="revised" content="Miercoles, 30 Marzo 2022"/>
+    </head>
+    <body>
+        <h1>Tablas</h1>
+        <hgroup>
+            <h3>Tabla 1.0</h3>
+            <table>
+                <tr>
+                    <td>Juan P&eacute;rez</td>
+                </tr>
+                <tr>
+                    <td>Pedro L&oacute;pez</td>
+                </tr>
+            </table>
+        </hgroup>
+        <hgroup>
+            <h3>Tabla 2.0</h3>
+            <table>
+                <tr>
+                    <td>Nombre</td>
+                    <td>Apellidos</td>
+                </tr>
+                <tr>
+                    <td>Juan</td>
+                    <td>P&eacute;rez</td>
+                </tr>
+                <tr>
+                    <td>Pedro</td>
+                    <td>L&oacute;pez</td>
+                </tr>
+            </table>
+        </hgroup>
+        <hgroup>
+            <h3>Tabla 3.0</h3>
+            <table border="5">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
+                </tr>
+                <tr>
+                    <td>Juan</td>
+                    <td></td>
+                    <td>P&eacute;rez</td>
+                </tr>
+                <tr>
+                    <td>Pedro</td>
+                    <td>L&oacute;pez</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+        </hgroup>
+        <hgroup>
+            <h3>Tabla 3.1 (Combinar columnas)</h3>
+            <table border="5">
+                <tr>
+                    <td>No.</td>
+                    <th>Nombre</th>
+                    <th colspan="2">Apellidos</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Juan</td>
+                    <td>&nbsp;</td>
+                    <td>P&eacute;rez</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Pedro</td>
+                    <td colspan="2">L&oacute;pez</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Tom&aacute;s</td>
+                    <td>L&oacute;pez</td>
+                    <td>P&eacute;rez</td>
+                </tr>
+            </table>
+        </hgroup>
+        <hgroup>
+            <h3>Tabla 3.2 (combinar renglones)</h3>
+            <table border="5">
+                <tr>
+                    <td>No.</td>
+                    <th>Nombre</th>
+                    <th colspan="2">Apellidos</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Juan</td>
+                    <td>&nbsp;</td>
+                    <td>P&eacute;rez</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Pedro</td>
+                    <td colspan="2">L&oacute;pez</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td rowspan="2">Tom&aacute;s</td>
+                    <td>L&oacute;pez</td>
+                    <td>P&eacute;rez</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td colspan="2">Mart&iacute;nez</td>
+                </tr>
+            </table>
+        </hgroup>
+        <hgroup>
+            <h3>Tabla 3.3 (Combinar columnas y renglones)</h3>
+            <table border="5">
+                <tr>
+                    <td>No.</td>
+                    <th>Nombre</th>
+                    <th colspan="2">Apellidos</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Juan</td>
+                    <td colspan="2" rowspan="2">P&eacute;rez</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Pedro</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td rowspan="2">Tom&aacute;s</td>
+                    <td>L&oacute;pez</td>
+                    <td>P&eacute;rez</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td colspan="2">Mart&iacute;nez</td>
+                </tr>
+            </table>
+        </hgroup>
+        <hgroup>
+            <h3>Ejercicio 1.0</h3>
+            <table border="5">
+                <tbody>
+                    <tr>
+                        <td>A</td>
+                        <td>B</td>
+                        <td rowspan="3">C</td>
+                        <td>D</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">E</td>
+                        <td>F</td>
+                        <td rowspan="3">G</td>
+                    </tr>
+                    <tr>
+                        <td>H</td>
+                    </tr>
+                    <tr>
+                        <td>I</td>
+                        <td>J</td>
+                        <td>K</td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <th colspan="4">Tabla No. 1</th>
+                </thead>
+            </table>
+        </hgroup>
+        <hgroup>
+            <h3>Ejercicio 2.0</h3>
+            <table border="5">
+                <thead>
+                    <th colspan="4"><p align="center">Tabla No. 2</p></th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><p align="center">1</p></td>
+                        <td><p align="center">2</p></td>
+                        <td><p align="center">3</p></td>
+                        <td><p align="center">4</p></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3"><p align="center">5</p></td>
+                        <td><p align="center">6</p></td>
+                        <td colspan="2">
+                            <p align="center">7</p>
+                        </td>               
+                    </tr>
+                    <tr>
+                        <td><p align="center">8</p></td>
+                        <td><p align="center">9</p></td>
+                        <td rowspan="2"><p align="center">10</p></td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="2"><p align="center">11</p></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </hgroup>
+        <hgroup>
+            <h3>Ejercicio 3.0</h3>
+            <table border="5">
+                <thead>
+                    <tr>
+                        <th colspan="4">Tabla No. 3</th>
+                    </tr>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>Comida</th>
+                        <th>Hotel</th>
+                        <th>Transporte</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <th>TOTAL</th>
+                    <th>80</th>
+                    <th>510</th>
+                    <th>60</th>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <th colspan="4">Vallartas</th>
+                    </tr>
+                    <tr>
+                        <td>01/Jul/2022</td>
+                        <td>15</td>
+                        <td>120</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>02/07/2022</td>
+                        <td>18</td>
+                        <td>120</td>
+                        <td>34</td>
+                    </tr>
+                    <tr>
+                        <td>03/07/2022</td>
+                        <td>25</td>
+                        <td>120</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <th colspan="4">Nuevo Vallartas</th>
+                    </tr>
+                    <tr>
+                        <td>04/Jul/2022</td>
+                        <td>10</td>
+                        <td>75</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>05/Jul/2022</td>
+                        <td>12</td>
+                        <td>75</td>
+                        <td>14</td>
+                    </tr>
+                </tbody>
+            </table>
+        </hgroup>
+        
+    </body>
+   
+</html>

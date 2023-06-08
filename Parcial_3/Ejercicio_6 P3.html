@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ETIQUETAS HTML</title>
+        <meta charset="utf-8"/>
+        <meta name="author" content="Uriel Montejano Briano"/>
+        <meta name="description" content="Hojas de estilo en cascada"/>
+        <meta name="keywords" content="hmtl,tags,style"/>
+        <meta name="revised" content="Lunes, 09 Mayo 2022"/>
+        
+        <style type="text/css">
+            div{
+                width: 100px;
+                height: 30px;
+                text-align: center;
+                background-color: lawngreen;
+                border: 2px solid black;
+                transition: width 0.5s, height 0.5s;
+            }
+            
+            div:hover{
+                width: 200px;
+                height: 50px;
+                background-color: deepskyblue;
+            }
+            
+            #animacion{
+                width: 250px;
+                height: 250px;
+                position: relative;
+                animation-name: ejemplo;
+                /*animation-delay: 1s;*/
+                animation-duration: 3s;
+                animation-iteration-count: 5;
+            }
+            
+            @keyframes ejemplo{
+                0%{background-color: red; left: 0px; top: 0px;}
+                25%{background-color: yellow; left: 500px; top: 0px;}
+                50%{background-color: blue; left: 500px; top: 500px;}
+                75%{background-color: green; left: 0px; top: 500px;}
+                100%{background-color: red; left: 0px; top: 0px;}
+            }
+            
+            #gradiente{
+                width: 750px;
+                height: 250px;
+                background-image: linear-gradient(to left, red, orange, yellow, green, blue, indigo, violet);
+            }
+            
+            #degradado{
+                width: 750px;
+                height: 250px;
+                background-image: linear-gradient(to right, rgba(255,0,0,1), rgba(0,0,255,0));
+                background-image: linear-gradient(to right, rgba(255,0,0,1), rgba(0,0,255,0));
+            }
+            
+            #repeticion{
+                width: 750px;
+                height: 250px;
+                background-color: #FFF;
+                background-image: repeating-linear-gradient(180deg, red, yellow 10%, green 20%);
+                
+            }
+            
+        </style>
+    </head>
+    <body>
+        <main>
+            <hgroup>
+                <h2>Transicion</h2>
+                <div>Opcion No.1</div>
+                <div>Opcion No.2</div>
+                <div>Opcion No.3</div>
+                <div>Opcion No.4</div>
+                <div>Opcion No.5</div>
+            </hgroup> 
+            
+            <hgroup>
+                <h2>Animación</h2>
+                <div id="animacion"></div>
+            </hgroup>
+            
+            <hgroup>
+                <h2>Filtros</h2>
+                <img src="https://tec.com.pe/wp-content/uploads/2021/08/Handicapable-One-vence-a-Sekiro-Shadows-Die-Twice-con-la.jpg" width="500px" style="-webkit-box-reflect: right 10px">
+            </hgroup>
+            
+            <hgroup>
+                <h2>Gradientes</h2>
+                <div id="gradiente"></div>
+            </hgroup>
+            
+            <hgroup>
+                <h2>Degradado</h2>
+                <div id="degradado"></div>
+            </hgroup>
+            
+            <hgroup>
+                <h2>Repeticion</h2>
+                <div id="repeticion"></div>
+            </hgroup>
+        </main>
+    </body>
+    
+</html>

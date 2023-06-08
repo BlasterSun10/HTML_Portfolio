@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ETIQUETAS HTML</title>
+        <meta charset="utf-8"/>
+        <meta name="author" content="Uriel Montejano Briano"/>
+        <meta name="description" content="Hojas de estilo en cascada"/>
+        <meta name="keywords" content="hmtl,tags,style"/>
+        <meta name="revised" content="Jueves, 05 Mayo 2022"/>
+        
+        <style type="text/css">
+            .original, .translate, .scale, .rotate, .skew, .matrix{
+                background-color: deepskyblue;
+                width: 300px;
+                height: 100px;
+                border: 2px solid black;
+            }
+            
+            .translate{
+                border: 2px dashed black;
+                transform: translate(-50px, -50px);
+                /*transform: translateX(50px);
+                transform: translateY(50px);*/
+            }
+            
+            .scale{
+                border: 2px dotted black;
+                transform: scale(1.5, 0.75);
+                /*transform: scaleX(1.5);
+                transform: scaleY(1.5);*/
+            }
+            
+            .rotate{
+                border: 2px solid black;
+                transform: rotate(-30deg);
+                /*transform: rotateX(45deg);
+                transform: rotateY(45deg);*/
+            }
+            
+            .skew{
+                border: 2px none black;
+                transform: skewX(30deg);
+                transform: skewY(30deg);
+            }
+            
+            .matrix{
+                border: 2px none black;
+                transform: matrix(1, 0, 0, 1, 50, 50); /*
+                original*/
+                /*transform: matrix(1.25, 0, 0, 1.25, 50, 50);*/
+                transform: matrix(0.75, 0.25, 0.5, 0.75, 50, -50);
+                
+            }
+            
+            #element{
+                width: 100px;
+                height: 100px;
+                transform-style: preserve-3d;
+                transition: 1.5s;
+                transform: rotate3d(1,1,1,30deg);
+                margin: 50px auto;
+                
+            }
+            
+            #element:hover, #element:focus{
+                transform: rotate3d(1,1,1,30deg)
+                matrix3d(1,0,0,0,0,1,6,0,0,0,1,0,50,100,0,1.1);
+                
+            }
+            
+            .face{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                backface-visibility: inherit;
+                font-size: 60px;
+                color: white;
+            }
+            
+            .front{
+                background: rgba(90, 90, 90, 0.7);
+                transform: translateZ(50px);
+            }
+            
+            .back{
+                background: rgba(0, 210, 0, 0.7);
+                transform: rotateY(180deg) translateZ(50px);
+            }
+            
+            .right{
+                background: rgba(210, 0, 0, 0.7);
+                transform: rotateY(90deg) translateZ(50px);
+            }
+            
+            .left{
+                background: rgba(0, 0, 210, 0.7);
+                transform: rotateY(-90deg) translateZ(50px);
+            }
+            
+            .top{
+                background: rgba(210, 210, 0, 0.7);
+                transform: rotateX(90deg) translateZ(50px); 
+            }
+            
+            .bottom{
+                background: rgba(210, 0, 210, 0.7);
+                transform: rotateX(-90deg) translateZ(50px); 
+            }
+        </style>
+        
+        <body>
+            <main>
+                <h1>Transformaciones</h1>
+                <hgroup>
+                    <h2>Cambio de posición</h2>
+                    <div class="original"></div>
+                    <br>
+                    <div class="translate"></div>
+                </hgroup>
+                
+                <hgroup>
+                    <h2>Cambio de tamaño</h2>
+                    <div class="original"></div>
+                    <br>
+                    <div class="scale"></div>
+                </hgroup>
+                
+                <hgroup>
+                    <h2>Cambio de orientacion</h2>
+                    <div class="original"></div>
+                    <br>
+                    <div class="rotate"></div>
+                </hgroup>
+                
+                <hgroup>
+                    <h2>Cambio de oblicuidad</h2>
+                    <div class="original"></div>
+                    <br>
+                    <div class="skew"></div>
+                </hgroup>
+                
+                <hgroup>
+                    <h2>Cambio multiple</h2>
+                    <div class="original"></div>
+                    <br>
+                    <div class="matrix"></div>
+                </hgroup>
+                
+                <hgroup>
+                    <h2>Transformación en 3D</h2>
+                    <div id="element">
+                        <div class="face front">1</div>
+                        <div class="face back">2</div>
+                        <div class="face right">3</div>
+                        <div class="face left">4</div>
+                        <div class="face top">5</div>
+                        <div class="face bottom">6</div>
+                    </div>
+                </hgroup>
+                
+            </main>
+        </body>
+    </head>
+</html>

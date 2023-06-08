@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Etiquetas HTML</title>
+        <meta charset="utf-8"/>
+        <meta name="author" content="Uriel Montejano Briano"/>
+        <meta name="description" content="Etiquetas javascript"/>
+        <meta name="keywords" content="hmtl,tags, function"/>
+        <meta name="revised" content="Jueves, 12 mayo 2022"/>
+        <style>
+            .generic {
+                text-shadow: 3px 3px silver;
+                text-transform: uppercase;
+            }
+        </style>
+        <script>
+            function resalta(element) {
+                switch(document.style.borderColor) {
+                    case 'red':
+                       element.style.borderColor = 'blue';
+                        break;
+                    case 'blue':
+                        element.style.borderColor = 'red';
+                        break;
+                }
+            }
+        </script>
+    </head>
+    <body onload="bienvenido()">
+        <main>
+            <h1>Document object model</h1>
+            <hgroup>
+                <h2>Element</h2>
+                <a class="buscador" id="google" href="https://www.google.com/">Ir a Google...</a><br>
+                <a class="redsocial" id="facebook" href="https://www.facebook.com/">Ir a Facebook...</a><br>
+                <a class="redsocial" id="twitter" href="https://www.twitter.com/">Ir a Twtitter...</a><br>
+                <a class="redsocial" id="instagram" href="https://www.Instagram.com/">Ir a Instagram...</a><br>
+                <a class="multimedia" id="youtube" href="https://www.youtube.com/">Ir a YouTube...</a><br>
+            </hgroup>
+                
+            <hgroup>
+                <h2>Etiqueta</h2>
+                <button onclick="document.body.style.backgroundColor='lightgreen';">Cambia fondo</button>
+            </hgroup>
+            
+            <hgroup>
+                <h2>Scripts</h2>
+                <button id="background">Cambia fondo</button>
+                
+                <script>
+                    var button = document.getElementById('background');
+                    function cambiaColor() {
+                        document.body.style.backgroundColor = 'grey';
+                    }
+                    button.addEventListener('click', cambiaColor);
+                    
+                    document.getElementById('background').addEventListener('dblclick', () => { document.body.style.backgroundColor = 'lightblue';
+                    });
+                </script>
+            </hgroup>
+            
+            <hgroup>
+                <h2>C&oacute;digo externo</h2>
+                <button id="changeBackground">Cambia fondo</button>
+                <script src="script8.js"></script>
+            </hgroup>
+            
+            <hgroup>
+                <h2>Alert</h2>
+                <p onclick="alert('Se presiono un boton del raton');" onmouseover="alert('Acabas de pasar por encima del párrafo');" style="background-color: aquamarine">Puedes presionar este elemento o <br>pasar el raton por encima...</p>
+                
+                <h3>Funcion dentro de la etiqueta</h3>
+                <input type="button" value="Presionar" onclick="muestraMensaje()">
+                <script>
+                    function muestraMensaje(){
+                        alert('Gracias por presionar el boton...');
+                    }
+                </script>
+                <h3>Funciones en un archivo externo</h3>
+                <input id="btnAccion" type="button" value="Presionar">    
+            </hgroup>
+            <hgroup>
+                <h2>CSS con JavaScript</h2>
+                <h3>Ejemplo No.1</h3>
+                <div id="contenido" style="width: 250px; height: 60px; border: 5px solid silver; background-color: white;" onmouseover="resalta;" onmouseout="this.style.borderColor = silver;">
+                    Secci&oacute;n de contenido
+                </div>
+                <h3>Ejemplo No.2</h3>
+                <div id="contenidoB" style="width: 250px; height: 60px; border: 5px solid red; background-color: white;" onmouseover="resalta(this);" onmouseout="resalta(this);">
+                    Secci&oacute;n de contenido
+                </div>
+                <h3>Ejemplo No.3</h3>
+                <div id="contenidoC" style="width: 250px; height: 60px; border: 5px solid lightblue; background-color: white;">
+                    Secci&oacute;n de contenido
+                </div>
+            </hgroup>
+            
+            <hgroup>
+                <h2>JavaScript - Selector</h2>
+                <div>
+                    <span id="id01" class="generic" title="Blue">Blue</span><br>
+                    <span id="id02" class="generic" title="Green">Green</span><br>
+                    <span id="id03" class="generic" title="Red">Red</span><br>
+                    <span id="id04" class="generic" title="Orange">Orange</span><br>
+                    <span id="id05" class="generic" title="Fuchsia">Fuchsia</span><br>
+                </div>
+                <br>
+                <div id="testSelector">
+                    <span id="id1" class="generic" title="Blue">Fuchsia</span><br>
+                    <span id="id2" class="generic" title="Green">Blue</span><br>
+                    <span id="id3" class="generic" title="Red">Green</span><br>
+                    <span id="id4" class="generic" title="Orange">Red</span><br>
+                    <span id="id5" class="generic" title="Fuchsia">Orange</span><br>
+                </div>
+                
+                <input type="button" value="Color Title" onclick="colores_A()">
+                <input type="button" value="Color Content" onclick="colores_B()">
+                
+                <script>
+                    function colores_A() {
+                        var listaNodos = document.querySelectorAll('#testSelector .generic');
+                        for (var i = 0; i < listaNodos.length; i++) {
+                            var item = listaNodos[i];
+                            item.style.color = item.title;
+                        }
+                    }
+                    function colores_B() {
+                        var listaNodos = document.querySelectorAll('.generic');
+                        for (var i = 0; i < listaNodos.length; i++) {
+                            var item = listaNodos[i];
+                            item.style.color = item.textContent;
+                        }
+                    }
+                </script>
+            </hgroup>
+        
+        </main>
+    </body>
+    <script src="script8.js"">
+    </script>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Etiquetas HTML</title>
+        <meta charset="utf-8"/>
+        <meta name="author" content="Uriel Montejano Briano"/>
+        <meta name="description" content="JavaScript-Document Object Model"/>
+        <meta name="keywords" content="hmtl, tags, script"/>
+        <meta name="revised" content="Martes, 17 de mayo 2022"/>
+    
+    
+        <script>
+            function MuestraInformacion(objEvento) {
+                var evento = objEvento || window.event;
+                var mensaje = "Tipo de evento: " + evento.type + "<br>";
+                mensaje += "key code: " + evento.keyCode + "<br>";
+                mensaje += "Char code: " + String.fromCharCode(evento.charCode) + "<br>";
+
+                keyboard.innerHTML += "----- ----- ----- ----- -----<br>" + mensaje;
+                keyboard.style.backgroundColor = 'black';
+                keyboard.style.color = 'lightgreen';
+            }
+            
+            function cargaInformacion(objEvento) {
+                var evento = objEvento || window.event;
+                var puntoX = evento.clientX;
+                var puntoY = evento.clientY;
+                var mensaje = "Coordenadas cliente: (" + puntoX + ", " + puntoY + ")<br>";
+                puntoX = evento.screenX;
+                puntoY = evento.screenY;
+                mensaje += "Coordenadas pantalla: (" + puntoX + ", " + puntoY + ")<br>";
+                
+                mouse.innerHTML += "----- ----- ----- ----- -----<br>" + mensaje;
+                mouse.style.backgroundColor = 'black';
+                mouse.style.color = 'lightblue';
+            }
+            
+            window.onload = function() {
+                document.onkeypress = MuestraInformacion;
+                document.onkeydown = MuestraInformacion;
+                document.onkeyup = MuestraInformacion;
+                
+                document.onclick = cargaInformacion;
+            }
+        </script>
+    
+    </head>
+    
+    <body>
+        <main>
+            <h1>Document Object Model</h1>
+            <hgroup>
+                <h2>Teclado</h2>
+                <div id="keyboard"></div>
+            </hgroup>
+            <hgroup>
+                <h2>Rat&oacute;n</h2>
+                <div id="mouse"></div>
+            </hgroup>
+        </main>
+    </body>
+</html>

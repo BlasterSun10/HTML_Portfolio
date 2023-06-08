@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ETIQUETAS HTML</title>
+        <meta charset="utf-8"/>
+        <meta name="author" content="Uriel Montejano Briano"/>
+        <meta name="description" content="Hojas de estilo en cascada"/>
+        <meta name="keywords" content="hmtl,tags,style"/>
+        <meta name="revised" content="Martes, 10 Mayo 2022"/>
+        
+        <style type="text/css">
+            #tres{
+                column-count: 3;
+                column-gap: 50px;
+                text-align: justify;
+                column-rule: 1px dotted black;
+            }
+            
+            ul{
+                list-style: none;
+                padding-left: 10px;
+                margin-left: 10px;
+            }
+            
+            li:before{
+                content: "\2615";
+                padding-right: 8px;
+                
+            }
+            
+            li{
+                color: green;
+            }
+            
+            ul li:nth-child(odd){
+                background-color: white;
+            }
+            
+            ul li:nth-child(even){
+                background-color: lightgray;
+            }
+            
+            .tooltip{
+                position: relative;
+                display: inline-block;
+                border-bottom: 1px dotted black;
+            }
+            
+            .tooltip .tooltiptext{
+                visibility: hidden;
+                position: absolute;
+                z-index: 1;
+                width: 120px;
+                text-align: center;
+                padding: 2px;
+                border: ipx solid gray;
+                background-color: white;
+            }
+            
+            .tooltip:hover .tooltiptext{
+                visibility: visible;
+            }
+            
+        </style>
+    </head>
+    
+    <body>
+        <main>
+            <hgroup>
+                <h2>Columnas</h2>
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in arcu vitae dui fermentum malesuada. Pellentesque eget massa eget massa tempus convallis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer nunc eros, gravida eu magna vel, condimentum porta eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus ac nulla leo. Donec blandit est quam, nec blandit sem posuere non. Phasellus lectus lorem, rutrum at sagittis accumsan, congue ut velit.</div><br>
+                <div id="tres">
+                    Nulla eu placerat augue. Curabitur pharetra egestas quam at placerat. Sed ornare pharetra enim et venenatis. Etiam efficitur ex eu mi porta egestas. In sem erat, pharetra in hendrerit non, interdum a massa. Curabitur dictum elit eu finibus interdum. Curabitur vestibulum aliquet justo, in eleifend turpis ullamcorper eu. Pellentesque vestibulum finibus auctor. Nam eleifend ante placerat, semper felis at, elementum dolor. Vestibulum dictum vel sapien et lacinia.
+
+                    Vivamus sodales nec tortor vel consequat. Quisque interdum lacinia mauris. Nam mattis interdum urna ut pulvinar. Aliquam eget ex pellentesque, gravida nulla non, porttitor velit. Praesent in ante lobortis, molestie ex eget, commodo elit. Vivamus aliquet risus ex, eu tincidunt ex sollicitudin dapibus. Donec ac fermentum lacus. Aenean ornare elementum ullamcorper. Nulla ut mi cursus, feugiat est tincidunt, sollicitudin sem. Etiam eleifend turpis nec augue molestie, ac tempor orci sagittis. Curabitur porta nunc sit amet sodales efficitur. Phasellus in nisi et lorem lobortis tincidunt. Etiam vulputate vulputate tortor sed dictum.</div><br>
+                
+                    In hac habitasse platea dictumst. In eget dapibus neque, id consequat metus. Sed consequat turpis id vehicula convallis. Aenean ultricies at massa vel rhoncus. Nulla non risus lacus. Morbi eget volutpat metus, vitae malesuada ante. Ut posuere aliquam nisl a mollis. Nullam efficitur lectus vel tincidunt dignissim. Nulla felis mauris, porta eu tempor ut, blandit eget risus. Vestibulum mauris sapien, dignissim ac augue eu, pharetra mattis arcu. Mauris varius quis mi rhoncus luctus.
+
+                    Vestibulum lacinia tempus commodo. Etiam vitae tincidunt metus, et semper purus. Praesent ante purus, porta a quam nec, semper mattis lectus. Phasellus in elit quis nunc rutrum vestibulum in sit amet nibh. Donec tempus mauris ut bibendum cursus. Integer sed ante augue. Aliquam vulputate interdum turpis quis venenatis. Etiam quis accumsan dolor. Nulla fermentum id nisl id lobortis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc eget velit in purus interdum tempus. Phasellus ac nisl ac velit maximus sollicitudin. Mauris tempor laoreet mi bibendum gravida. Aenean dapibus quam in consequat fringilla. Sed nec volutpat elit, eget commodo augue.
+            </hgroup>
+            
+            <hgroup>
+                <h2>Listas personalizadas</h2>
+                <ul>
+                    <li>Primero</li>
+                    <li>Segundo</li>
+                    <li>Tercero</li>
+                    <li>Cuarto</li>
+                    <li>Quinto</li>
+                </ul>
+            </hgroup>
+            
+            <hgroup>
+                <h2>Listas ordenada personalizadas</h2>
+                <ol type="A" start="27">
+                    <li>Primero</li>
+                    <li>Segundo</li>
+                    <li>Tercero</li>
+                    <li>Cuarto</li>
+                    <li>Quinto</li>
+                </ol>
+            </hgroup>
+            
+            <hgroup>
+                <h2>Simbolos especiales</h2>
+                <p>I will display &spades;</p>
+                <p>I will display &#9824;</p>
+                <p>I will display &#x26660;</p>
+            </hgroup>
+            
+            <hgroup>
+                <h2>Tooltip</h2>
+                <div class="tooltip">
+                    Texto con tooltip
+                    <span class="tooltiptext">
+                        Tooltip ejemplo...
+                    </span>
+                </div>
+                Este texto no tiene tooltip   
+            </hgroup>
+            
+        </main>
+    </body>
+</html>
